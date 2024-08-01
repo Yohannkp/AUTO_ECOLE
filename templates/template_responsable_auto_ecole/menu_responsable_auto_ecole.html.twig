@@ -1,0 +1,123 @@
+ <aside class="main-sidebar">
+    <!-- sidebar-->
+    <section class="sidebar position-relative">	
+	  	<div class="multinav">
+		  <div class="multinav-scroll" style="height: 100%;">	
+			  <!-- sidebar menu-->
+			  <ul class="sidebar-menu" data-widget="tree">	
+				<li class="header">Tableau de Bord</li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Layout-4-blocks"><span class="path1"></span><span class="path2"></span></i>
+					<span>Tableau de Bord</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				   <ul class="treeview-menu">			
+					<li><a href="{{url('app_template_responsable_auto_ecole')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Tableau de Bord</a></li>								
+					
+				  </ul>
+				  
+				</li>
+				
+				<li class="header">Espace client </li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Write"><span class="path1"></span><span class="path2"></span></i>
+					<span>Vos Apprenant</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">			
+					<li><a href="{{url('app_apprenant_inscrit')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Liste apprenant</a></li>								
+					
+				  </ul>
+				</li>			
+				
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-File"><span class="path1"></span><span class="path2"></span><span class="path3"></span></i>
+					<span>Rapport</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="{{url('app_choix_rapport')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Ecrire un rapport</a></li>
+					<li><a href="{{url('app_liste_rapport')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Liste Rapport</a></li>
+				  </ul>
+				</li> 
+				{# <li class="treeview">
+				  <a href="#">
+					<i class="icon-Chart-pie"><span class="path1"></span><span class="path2"></span></i>
+					<span>Payement</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="{{url('app_payement_stat')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Statistic</a></li>
+					<li><a href="{{url('app_portefeuille')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Portefeuille</a></li>
+				  </ul>
+				</li>  #}
+
+				<li class="header">Messagerie</li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Library"><span class="path1"></span><span class="path2"></span></i>
+					<span>Chat</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="{{path('message_choix_apprenant')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Chat</a></li>
+					
+				  </ul>
+				</li> 				 
+				  		
+				<li class="header">Planing</li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Library"><span class="path1"></span><span class="path2"></span></i>
+					<span>Vos sessions</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="{{url('app_session_new')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Créer une session</a></li>
+					<li><a href="{{url('app_session_index')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>Vos sessions</a></li>
+
+				  </ul>
+				</li> 		
+
+
+				<li class="header">Rendez - vous</li>
+				<li class="treeview">
+				  <a href="#">
+					<i class="icon-Library"><span class="path1"></span><span class="path2"></span></i>
+					<span>Vos rendez-vous</span>
+					<span class="pull-right-container">
+					  <i class="fa fa-angle-right pull-right"></i>
+					</span>
+				  </a>
+				  <ul class="treeview-menu">
+					<li><a href="{{url('app_rdv_autoecole')}}"><i class="icon-Commit"><span class="path1"></span><span class="path2"></span></i>liste rdv</a></li>
+					
+				  </ul>
+				</li> 		
+				
+			     
+			  </ul>
+		  </div>
+		</div>
+    </section>
+	<div class="sidebar-footer">
+		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Settings" aria-describedby="tooltip92529"><span class="icon-Settings-2"></span></a>
+		<a href="mailbox.html" class="link" data-toggle="tooltip" title="" data-original-title="Email"><span class="icon-Mail"></span></a>
+		<a href="javascript:void(0)" class="link" data-toggle="tooltip" title="" data-original-title="Logout"><span class="icon-Lock-overturning"><span class="path1"></span><span class="path2"></span></span></a>
+	</div>
+  </aside>

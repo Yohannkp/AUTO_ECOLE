@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from eduadmin-template.multipurposethemes.com/bs4/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Aug 2022 02:38:00 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{asset('AdminApprenant/images/favicon.png')}}">
+
+    <title>EduAdmin - Dashboard</title>
+    
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="{{asset('css/vendors_css.css')}}">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	  
+	<!-- Style-->  
+	<link rel="stylesheet" href="{{asset('css/style.css')}}">
+	<link rel="stylesheet" href="{{asset('css/skin_color.css')}}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+  </head>
+
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
+	
+<div class="wrapper">
+	<div id="loader"></div>
+	{% block header %}
+	{{ include('template_apprenant/header.apprenant.html.twig') }}
+	{% endblock %}
+
+	
+	{% block menu %}
+	{{ include('template_apprenant/menu.apprenant.html.twig') }}
+	{% endblock %}
+  
+ 
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Main content -->
+		{% block contenu %}
+			
+		{% endblock %}
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+    {% block footer %}
+	  {{ include('template_apprenant/footer.apprenant.html.twig') }}
+	{% endblock %}
+  
+
+  <!-- Control Sidebar -->
+ 
+
+  {% block droite_notif %}
+	  {{ include('template_apprenant/notification_droite.html.twig') }}
+	{% endblock %}
+  
+  <!-- /.control-sidebar -->
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+  
+</div>
+
+	<script src="{{asset('js/vendors.min.js')}}"></script>
+	<script src="{{asset('js/message.js')}}"></script>
+	<script src="{{asset('js/pages/chat-popup.js')}}"></script>
+    <script src="{{asset('assets/icons/feather-icons/feather.min.js')}}"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+	
+	<script>
+		
+		
+		
+
+		
+		
+	</script>
+	
+	<script src="{{asset('assets/vendor_components/apexcharts-bundle/dist/apexcharts.js')}}"></script>
+	<script src="{{asset('assets/vendor_components/moment/min/moment.min.js')}}"></script>
+	<script src="{{asset('assets/vendor_components/fullcalendar/fullcalendar.js')}}"></script>
+	
+	<!-- EduAdmin App -->
+	<script src="{{asset('js/template.js')}}"></script>
+	<script src="{{asset('js/pages/dashboard.js')}}"></script>
+	<script src="{{asset('js/pages/calendar.js')}}"></script>
+	<script src="{{asset('assets/vendor_components/jquery-steps-master/build/jquery.steps.js')}}"></script>
+	<script src="{{asset('assets/vendor_components/jquery-validation-1.17.0/dist/jquery.validate.min.js')}}"></script>
+    <script src="{{asset('assets/vendor_components/sweetalert/sweetalert.min.js')}}"></script>
+	<script src="{{asset('js/pages/steps.js')}}"></script>
+	<script src="{{asset('assets/vendor_plugins/bootstrap-slider/bootstrap-slider.js')}}"></script>
+	<script src="{{asset('assets/vendor_components/OwlCarousel2/dist/owl.carousel.js')}}"></script>
+	<script src="{{asset('assets/vendor_components/flexslider/jquery.flexslider.js')}}"></script>
+	<script src="{{asset('js/pages/slider.js')}}"></script>
+	<script src="{{asset('js/pages/dashboard3.js')}}"></script>
+	<script src="{{asset('js/pages/timeline.js')}}"></script>
+	<script src="{{asset('assets/vendor_components/datatable/datatables.min.js')}}"></script>
+	<script src="{{asset('js/pages/data-table.js')}}"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	
+	<script src="https://cdn.fedapay.com/checkout.js?v=1.1.7"></script>
+	
+	<script type="text/javascript">
+		function payer() {
+			
+			Nom = document.getElementById("Nom").value;
+			Prenom = document.getElementById("Prenom").value;
+			Adresse = document.getElementById("Adresse").value;
+			ecoleNom = document.getElementById("ecoleNom").value;
+			ecoleTel = document.getElementById("ecoleTel").value;
+			debut = document.getElementById("debut").value;
+			fin = document.getElementById("fin").value;
+			date = document.getElementById("date").value;
+			FedaPay.init('.btn-pay-fedapay', {
+				public_key: 'pk_live_PIMy2jvfkKqZEWS1NCP-ldEy',
+				transaction: {
+				  amount: 100,
+				  description: "Monsieur/Madame "+Nom+' '+Prenom+" demande un cour de conduire pour l'autoecole : "+ecoleNom+' Tel : '+ecoleTel+" de "+debut+' à '+fin+" le "+date
+				},
+				customer: {
+				  email: Adresse,
+				  lastname: Prenom,
+				  firstname: Nom,
+				}
+			   });
+		
+		}
+
+		function payercour() {
+			
+			Nom = document.getElementById("Nom").value;
+			Prenom = document.getElementById("Prenom").value;
+			Adresse = document.getElementById("Adresse").value;
+			
+			FedaPay.init('.btn-pay-fedapay', {
+				public_key: 'pk_live_PIMy2jvfkKqZEWS1NCP-ldEy',
+				transaction: {
+				  amount: 100,
+				  description: "Monsieur/Madame "+Nom+' '+Prenom+" valide le payement pour avoir acces au cour"
+				},
+				customer: {
+				  email: Adresse,
+				  lastname: Prenom,
+				  firstname: Nom,
+				}
+			   });
+		
+		}
+		
+
+	</script>
+	
+</body>
+
+<!-- Mirrored from eduadmin-template.multipurposethemes.com/bs4/main/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Aug 2022 02:38:49 GMT -->
+</html>

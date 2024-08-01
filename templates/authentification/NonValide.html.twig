@@ -1,0 +1,25 @@
+{% extends 'base_site_web.html.twig' %}
+
+{% block title %}Validation Echec{% endblock %}
+
+{% block contenu %}
+
+<div class="content-wrapper">
+
+<div class="error-wrap mt-100 ptb-100">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="error-content">
+<img src="{{asset('WebSite/assets/img/404.png')}}" alt="Iamge">
+<h2>Oops! Votre validation de compte a échouer</h2>
+<p>Désoler mais vous dévez valider votre inscription avant de pouvoir accéder à votre tableau de bord</p>
+<a href="{{path('security_logout')}}" class="btn style2">Retour</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+</div>
+{% endblock %}

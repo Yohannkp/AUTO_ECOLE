@@ -1,0 +1,154 @@
+{% extends 'base_apprenant.html.twig' %}
+
+{% block contenu %}
+
+<!-- Content Header (Page header) -->	  
+		<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">Profile</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item" aria-current="page">Extra</li>
+								<li class="breadcrumb-item active" aria-current="page">Profile</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+		</div>
+
+{% for message in app.session.flashBag.get('info') %}
+
+				<div class="bg-info">
+					{{message}}
+
+				</div>
+				{% endfor %}
+	
+	<section class="content">
+
+		<div class="row">
+
+			<div class="col-12 col-lg-4 col-xl-6">
+				{% if statut == true %}
+				<div class="row">
+					<div class="col-md-12 col-lg-10">
+
+					
+						<a href="{{url('app_apprenant_désinscription',{'id':ecole.id})}}" class="waves-effect waves-light btn btn-outline btn-danger-light mb-5">Se désinscrire</a>
+
+				
+						
+							{# Code à exécuter si la condition est vraie #}
+							<div class="card">
+								<ul class="list-group list-group-flush">
+									<li class="list-group-item">Sessions  disponiples  </li> 
+									{% for session in sessions %}
+													{% if ecole.id == session.autoEcole.id %}
+														
+												
+												<li class="list-group-item">{{session.nom}} ({{session.dateDebut|date('d-m-Y')}} - {{session.dateFin|date('d-m-Y')}} ) <a href="{{url('app_planning_part_apprenant',{'id':session.id})}}"> <span class="glyphicon glyphicon-eye-open "></span></a></li> 
+				
+													{% endif %}
+												{% endfor %}
+								</ul>
+							</div>
+						
+
+
+						
+			
+					
+						
+
+
+						
+			  
+
+			  			
+			     	</div>
+
+					
+
+			  	
+			    </div>
+			</div>		
+
+	
+				
+
+			  <div class="col-12 col-lg-12 col-xl-6">
+				 <div class="box box-widget widget-user">
+	
+					<div class="widget-user-header bg-black" style="background: url('') center center;">
+					  <h3 class="widget-user-username"></h3>
+					  <h6 class="widget-user-desc">Auto-Ecole</h6>
+					</div>
+					<div class="widget-user-image">
+					  <img class="rounded-circle" src="{{asset('AdminApprenant/images/user.png')}}" alt="User Avatar">
+					</div>
+					<div class="box-footer">
+					  <div class="row">
+						<div class="col-sm-4">
+						  <div class="description-block">
+							<h5 class="description-header">12K</h5>
+							<span class="description-text">Membres</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+						<div class="col-sm-4 br-1 bl-1">
+						  <div class="description-block">
+							<h5 class="description-header">{{ecole.note}}</h5>
+							<span class="description-text">Note</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+						<div class="col-sm-4">
+						  <div class="description-block">
+							<h6 class="description-header">{{ecole.Horairedebut|date('h:i:s')}}</h6>
+							<span class="description-text">Ouvert</span>
+						  </div>
+						  <!-- /.description-block -->
+						</div>
+						<!-- /.col -->
+					  </div>
+					  <!-- /.row -->
+					</div>
+				  </div>
+				  <div class="box">
+					<div class="box-body box-profile">            
+					  <div class="row">
+						<div class="col-12">
+							<div>
+								<p>Email :<span class="text-gray pl-10">{{ecole.Mail}}</span> </p>
+								<p>Phone :<span class="text-gray pl-10">{{ecole.Telephone}}</span></p>
+								<p>Address :<span class="text-gray pl-10"></span>{{ecole.Addresse}}</p>
+							</div>
+						</div>
+					
+					  </div>
+					</div>
+					<!-- /.box-body -->
+				  </div>
+				
+			
+
+			  </div>
+
+			  {% else %}
+							{# Code à exécuter si la condition est fausse #}
+							<p>Vous n'êtes inscrit dans aucune auto école pour le moment</p>
+						{% endif %}
+	
+
+		</div>
+		 
+
+	</section>
+{% endblock %}

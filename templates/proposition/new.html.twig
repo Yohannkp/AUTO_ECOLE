@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ajouter Proposition{% endblock %}
+
+{% block contenu %}
+    <h1>Creer une Proposition</h1>
+
+    {{ include('proposition/_form.html.twig') }}
+
+    <a href="{{ path('app_proposition_index') }}">Retour a la liste</a>
+{% endblock %}

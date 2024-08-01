@@ -1,0 +1,131 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+
+
+                        <div class="row">
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-h-100">
+                                    <!-- card body -->
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-6">
+                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">Nombre d'utilisateur</span>
+                                                <h4 class="mb-3">
+                                                    <span class="counter-value" data-target="{{pr}}">0</span>
+                                                </h4>
+                                            </div>
+
+                                            <div class="col-6">
+                                                <div id="mini-chart1" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-nowrap">
+                                            
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+        
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-h-100">
+                                    <!-- card body -->
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-6">
+                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">Nombre de transaction</span>
+                                                <h4 class="mb-3">
+                                                    <span class="counter-value" data-target="{{tr}}">0</span>
+                                                </h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div id="mini-chart2" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-nowrap">
+                                           
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col-->
+        
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-h-100">
+                                    <!-- card body -->
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-6">
+                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">Nombre de rapport</span>
+                                                <h4 class="mb-3">
+                                                    <span class="counter-value" data-target="{{r}}">0</span>
+                                                </h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div id="mini-chart3" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-nowrap">
+                                           
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->
+        
+                            <div class="col-xl-3 col-md-6">
+                                <!-- card -->
+                                <div class="card card-h-100">
+                                    <!-- card body -->
+                                    <div class="card-body">
+                                        <div class="row align-items-center">
+                                            <div class="col-6">
+                                                <span class="text-muted mb-3 lh-1 d-block text-truncate">Nombre de session</span>
+                                                <h4 class="mb-3">
+                                                    <span class="counter-value" data-target="{{s}}">0</span>
+                                                </h4>
+                                            </div>
+                                            <div class="col-6">
+                                                <div id="mini-chart4" data-colors='["#5156be"]' class="apex-charts mb-2"></div>
+                                            </div>
+                                        </div>
+                                        <div class="text-nowrap">
+                                            
+                                        </div>
+                                    </div><!-- end card body -->
+                                </div><!-- end card -->
+                            </div><!-- end col -->    
+                        </div><!-- end row-->
+
+                       
+                    </div>
+                    <!-- container-fluid -->
+                </div>
+                <!-- End Page-content -->
+
+
+
+                  <!-- JAVASCRIPT -->
+        <script src="{{asset('SuperAdmin/assets/libs/jquery/jquery.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/bootstrap/js/bootstrap.bundle.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/metismenu/metisMenu.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/simplebar/simplebar.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/node-waves/waves.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/feather-icons/feather.min.js')}}"></script>
+        <!-- pace js -->
+        <script src="{{asset('SuperAdmin/assets/libs/pace-js/pace.min.js')}}"></script>
+
+        <!-- apexcharts -->
+        <script src="{{asset('SuperAdmin/assets/libs/apexcharts/apexcharts.min.js')}}"></script>
+
+        <!-- Plugins js-->
+        <script src="{{asset('SuperAdmin/assets/libs/admin-resources/jquery.vectormap/jquery-jvectormap-1.2.2.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/admin-resources/jquery.vectormap/maps/jquery-jvectormap-world-mill-en.js')}}"></script>
+        <!-- dashboard init -->
+        <script src="{{asset('SuperAdmin/assets/js/pages/dashboard.init.js')}}"></script>
+
+        <script src="{{asset('SuperAdmin/assets/js/app.js')}}"></script>
+
+
+{% endblock %}

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<!-- Mirrored from eduadmin-template.multipurposethemes.com/bs4/main-semidark/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Aug 2022 02:54:58 GMT -->
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="{{asset('AdminApprenant/images/favicon.png')}}">
+
+    <title>EduAdmin - Dashboard</title>
+    
+	<!-- Vendors Style-->
+	<link rel="stylesheet" href="{{asset('css1/vendors_css.css')}}">
+	  
+	<!-- Style-->  
+	<link rel="stylesheet" href="{{asset('css1/style.css')}}">
+	<link rel="stylesheet" href="{{asset('css1/skin_color.css')}}">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+     
+  </head>
+
+<body class="hold-transition light-skin sidebar-mini theme-primary fixed">
+	
+<div class="wrapper">
+	<div id="loader"></div>
+	
+  
+ {% block header %}
+	{{ include('template_responsable_auto_ecole/header_responsable.html.twig') }}
+ {% endblock %}
+
+ 
+
+ {% block menu %}
+	{{ include('template_responsable_auto_ecole/menu_responsable_auto_ecole.html.twig') }}
+ {% endblock %}
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+	  <div class="container-full">
+		<!-- Main content -->
+		{% block contenu %}
+            
+        {% endblock %}
+		<!-- /.content -->
+	  </div>
+  </div>
+  <!-- /.content-wrapper -->
+  
+
+  {% block footer %}
+	{{ include('template_responsable_auto_ecole/footer_responsable_auto_ecole.html.twig') }}
+ {% endblock %}
+
+  {% block notif_droite %}
+	{{ include('template_responsable_auto_ecole/notif_droite_responsable.html.twig') }}
+ {% endblock %}
+
+  <!-- Control Sidebar -->
+ 
+  <!-- /.control-sidebar -->
+  
+  <!-- Add the sidebar's background. This div must be placed immediately after the control sidebar -->
+  <div class="control-sidebar-bg"></div>
+  
+</div>
+<!-- ./wrapper -->
+	
+	<!-- ./side demo panel -->
+	
+	<!-- Sidebar -->
+		
+	
+	
+	
+	<!-- Vendor JS -->
+	<script src="{{asset('js1/vendors.min.js')}}"></script>
+	<script src="{{asset('js1/pages/chat-popup.js')}}"></script>
+    <script src="{{asset('assets1/icons/feather-icons/feather.min.js')}}"></script>	
+	<script src="{{asset('js/messages2.js')}}"></script>
+	<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+	<script src="{{asset('assets1/vendor_components/apexcharts-bundle/dist/apexcharts.js')}}"></script>
+	
+	<!-- EduAdmin App -->
+	<script src="{{asset('js1/template.js')}}"></script>
+	<script src="{{asset('js1/pages/dashboard2.js')}}"></script>
+
+    <script src="{{asset('assets1/vendor_components/datatable/datatables.min.js')}}"></script>
+	
+	<!-- EduAdmin App -->
+	<script src="{{asset('js1/template.js')}}"></script>
+	<script src="{{asset('js1/pages/data-table.js')}}"></script>
+	<script src="{{asset('assets1/vendor_components/chart.js-master/Chart.min.js')}}"></script>
+	<script src="{{asset('js1/pages/widget-charts2.js')}}"></script>
+	<script src="{{asset('assets1/vendor_components/Flot/jquery.flot.resize.js')}}"></script>
+	<script src="{{asset('assets1/vendor_components/Flot/jquery.flot.pie.js')}}"></script>
+	<script src="{{asset('assets1/vendor_components/Flot/jquery.flot.categories.js')}}"></script>
+	<script src="{{asset('assets1/vendor_components/Flot/jquery.flot.js')}}"></script>
+	<script src="{{asset('js1/pages/widget-flot-charts.js')}}"></script>
+	<script src="{{asset('../assets/vendor_components/ckeditor/ckeditor.js')}}"></script>
+	<script src="{{asset('../assets/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.js')}}"></script>
+	<script src="{{asset('js/pages/editor.js')}}"></script>
+	<script src="{{asset('js/template.js')}}"></script>
+	<script src="{{asset('assets1/vendor_plugins/iCheck/icheck.js')}}"></script>
+	<script src="{{asset('assets1/vendor_plugins/bootstrap-wysihtml5/bootstrap3-wysihtml5.all.min.js')}}"></script>
+	<script src="{{asset('js1/pages/mailbox.js')}}"></script>
+	<script src="{{asset('js/pages/form-compose.js')}}"></script>
+	
+</body>
+<!-- Mirrored from eduadmin-template.multipurposethemes.com/bs4/main-semidark/index2.html by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 06 Aug 2022 02:54:59 GMT -->
+</html>
+

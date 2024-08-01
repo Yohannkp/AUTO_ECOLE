@@ -1,0 +1,45 @@
+						{{ form_start(form) }}
+							<div class="box-body">
+								
+								<hr class="my-15">
+								<div class="form-group">
+								  <label>Date debut</label>
+								      {{ form_widget(form.dateDebut) }}
+								</div>
+
+								<div class="form-group">
+								  <label>Date fin</label>
+								      {{ form_widget(form.dateFin) }}
+								</div>
+                                <div class="form-group">
+								  <label>Heure debut</label>
+								      {{ form_widget(form.heure) }}
+								</div>
+								<div class="form-group">
+								  <label>Heure fin</label>
+								      {{ form_widget(form.heureFin) }}
+								</div>
+								
+                                <div class="form-group">
+								  <label>Description / titre</label>
+								     {{ form_widget(form.description) }}
+								</div>
+
+								<div class="form-group">
+								  <label>Couleur de texte</label>
+								      {{ form_widget(form.couleurBordure) }}
+								</div>
+
+								<div class="form-group">
+								  <label>Couleur de fond</label>
+								      {{ form_widget(form.couleurTexte) }}
+								</div>
+								
+							</div>
+							<!-- /.box-body -->
+							<div class="box-footer">
+                                    <input type="submit" value="Enregistrer" class="btn btn-rounded btn-warning btn-outline mr-1">
+								
+								
+							</div>  
+						{{ form_end(form) }}

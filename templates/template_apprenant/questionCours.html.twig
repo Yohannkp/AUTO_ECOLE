@@ -1,0 +1,60 @@
+{% extends 'base_apprenant.html.twig' %}
+
+{% block contenu %}
+<div class="content-header">
+			<div class="d-flex align-items-center">
+				<div class="mr-auto">
+					<h3 class="page-title">QUestionnaire</h3>
+					<div class="d-inline-block align-items-center">
+						<nav>
+							<ol class="breadcrumb">
+								<li class="breadcrumb-item"><a href="#"><i class="mdi mdi-home-outline"></i></a></li>
+								<li class="breadcrumb-item" aria-current="page">Bienvenue</li>
+								<li class="breadcrumb-item active" aria-current="page">Bonne chance</li>
+							</ol>
+						</nav>
+					</div>
+				</div>
+				
+			</div>
+<!-- Main content -->
+		<section class="content">
+		  <div class="row">
+			{% for row in qestion %}
+			
+			 <div class="col-12 col-xl-4">
+				<div class="box">
+					<div class="box-header with-border">
+						<h4 class="box-title">{{row.intitule}}</h4>
+					</div>
+					<div class="box-body">
+						<div class="d-flex align-items-center mb-25">
+							<span class="bullet bullet-bar bg-success align-self-stretch"></span>							
+							<div class="h-20 mx-20 flex-shrink-0">							
+								<input type="checkbox" id="md_checkbox_21" class="filled-in chk-col-success">
+								<label for="md_checkbox_21" class="h-20 p-10 mb-0"></label>
+							</div>
+							
+							<div class="d-flex flex-column flex-grow-1">
+								<a href="#" class="text-dark hover-success font-weight-500 font-size-16">
+									Create FireStone Logo
+								</a>
+								<span class="text-fade font-weight-500">
+									Due in 2 Days
+								</span>
+							</div>
+												 
+						</div>
+						
+					</div>
+				</div>
+			  </div>
+          	{% endfor %}
+			
+	
+		
+		  </div>
+		</section>
+		<!-- /.content -->
+
+{% endblock %}

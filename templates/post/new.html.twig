@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Nouveau Post{% endblock %}
+
+{% block contenu %}
+   
+
+    {{ include('post/_form.html.twig') }}
+
+    <a href="{{ path('app_post_index') }}">retour a la liste</a>
+{% endblock %}

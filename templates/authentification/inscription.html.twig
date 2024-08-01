@@ -1,0 +1,98 @@
+{% extends 'base_connexion.html.twig' %}
+
+{% block contenu %}
+
+
+<section class="Login-wrap ptb-100">
+<div class="container">
+<div class="row ">
+<div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2 col-md-10 offset-md-1">
+<div class="login-form-wrap">
+<div class="login-header">
+<h2>Inscrivez vous</h2>
+</div>
+{{form_start(form)}}
+<div class="row">
+<div class="col-md-6">
+<div class="form-group">
+{{form_row(form.Nom)}}
+<div class="help-block with-errors"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+{{form_row(form.Prenom)}}
+<div class="help-block with-errors"></div>
+</div>
+</div>
+
+<div class="col-md-6">
+<div class="form-group">
+{{form_row(form.Telephone)}}
+<div class="help-block with-errors"></div>
+</div>
+</div>
+<div class="col-md-6">
+<div class="form-group">
+{{form_row(form.Addresse)}}
+<br>
+<div class="help-block with-errors"></div>
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+<select name="sex" class="form-control" id="">
+    <option value="Homme">Homme</option>
+    <option value="Femme">Femme</option>
+</select>
+<div class="help-block with-errors"></div>
+</div>
+</div>
+
+<div class="col-md-12">
+<div class="form-group">
+{{form_row(form.Mail)}}
+<br>
+<div class="help-block with-errors"></div>
+</div>
+
+
+<div class="col-md-12">
+<div class="form-group">
+{{form_row(form.password)}}
+<br>
+{% if erreur is defined %}
+    {{erreur}}
+{% endif %}
+<div class="help-block with-errors"></div>
+</div>
+
+
+<div class="col-md-12">
+<div class="form-group">
+<input type="password" placeholder="Comfirmation Password" name="confirmation" class="form-control" id="conf-pass">
+<div class="help-block with-errors"></div>
+</div>
+</div>
+<br>
+<div class="col-md-12">
+<button type="submit" class="btn style1 w-100 d-block">Enregistrer</button>
+<div id="msgSubmit" class="h3 text-center hidden"></div>
+<div class="clearfix"></div>
+</div>
+</div>
+{{form_end(form)}}
+
+<div class="col-md-12">
+<p class="mb-0">Avez vous un compte? <a class="link style1" href="{{url('app_connexion')}}">Connectez-vous</a></p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+
+{% endblock %}

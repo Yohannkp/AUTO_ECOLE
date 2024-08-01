@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{% block contenu %}
+
+ <!-- <body data-layout="horizontal"> -->
+    
+        <div class="auth-page">
+               <div class="auth-content my-auto">
+        {{form_start(form)}}
+        <div class="mb-3">
+        {{form_row(form.Nom)}}
+        {{form_row(form.Description)}}
+        {{form_row(form.Note)}}
+        {{form_row(form.Telephone)}}
+        {{form_row(form.password)}}
+        {{form_row(form.Mail)}}
+        {{form_row(form.Addresse)}}
+        {{form_row(form.image)}}
+        </div>
+        <div class="mb-3">
+            <input type="time" name="HeureDebut" class="form-control">
+        </div>
+
+        <div class="mb-3">
+            <input type="time" name="HeureFin" class="form-control">
+        </div>
+        
+        
+        <div class="mb-3">
+            {{form_row(form.Enregistrer)}}
+        
+        </div>
+       
+        {{form_end(form)}}
+                </div>
+        </div>
+
+
+   <!-- JAVASCRIPT -->
+        <script src="{{asset('SuperAdmin/assets/libs/jquery/jquery.min.j')}}s"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/bootstrap/js/bootstrap.bundle.min.j')}}s"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/metismenu/metisMenu.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/simplebar/simplebar.min.js')}}"></script>
+        <script src="{{asset('SuperAdmin/assets/libs/node-waves/waves.min.js')}}"></script>
+        <script src="assets/libs/feather-icons/feather.min.js"></script>
+        <!-- pace js -->
+        <script src="{{asset('SuperAdmin/assets/libs/pace-js/pace.min.js')}}"></script>
+
+        <!-- validation init -->
+        <script src="{{asset('SuperAdmin/assets/js/pages/validation.init.js')}}"></script>
+
+
+{% endblock %}

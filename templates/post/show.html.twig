@@ -1,0 +1,29 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Post{% endblock %}
+
+{% block contenu %}
+    <h1>Post</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ post.id }}</td>
+            </tr>
+            <tr>
+                <th>Titre</th>
+                <td>{{ post.Titre }}</td>
+            </tr>
+            <tr>
+                <th>Contenu</th>
+                <td>{{ post.Contenu }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_post_index') }}">retour a la liste</a><br>
+
+    <a href="{{ path('app_post_edit', {'id': post.id}) }}">modifier</a>
+
+{% endblock %}
